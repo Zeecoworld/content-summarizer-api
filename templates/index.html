@@ -1,0 +1,39 @@
+{% extends "base.html" %} 
+{% load static %} {% block title %}Text Content Summarizer | DOCSUMMARIZER {% endblock title %} 
+{% block content %}<br><br>
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">DOCSUMMARIZER🧐</h1>
+        <p class="lead text-muted">Get Any Large Content File Summarized at a Single Click!</p>
+        <form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="input-group mb-3">
+                {% comment %} <input type="file" name="link" class="form-control" rows="4" required> {% endcomment %}
+                {% comment %} <input type="file" class="form-control" name="cvs" id="customFile"> {% endcomment %}
+                <textarea class="form-control" name="res" placeholder="Enter your text here" aria-label="With textarea"></textarea> 
+            </div>
+            <p>
+                <button type="submit" class="btn btn-primary my-2">Summarize</button> {% comment %} <a href="#" class="btn btn-secondary my-2">I'm Feeling Lucky</a> {% endcomment %}
+            </p>
+        </form>
+        <center>
+        {% if request.method == "POST" %}
+                 <textarea class="form-control"  aria-label="With textarea">{{re}}</textarea>   
+        {% endif %}
+        </center>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<div class="p-5 m-5"></div>
+<div class="p-5 m-5"></div>
+<div class="p-5 m-5"></div>
+{% endblock %}
