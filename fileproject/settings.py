@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-_=r)yg_sfl(a+qho!(rxft$kj07u*o##a-5--+95uod9pok@$s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['summarizer.herokuapp.com']
+ALLOWED_HOSTS = ['zeeco-summazier.azurewebsites.net']
 
 
 # Application definition
